@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchMyPrice - Smart Price Comparison</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-container">
+        <img src="https://i.ibb.co/1YQWY2M1/IMG-20250419-WA0084.jpg" alt="MatchMyPrice Logo" class="logo-img">
+        <h1 class="logo">MatchMyPrice</h1>
+      </div>
+      <p class="tagline">Compare prices across all major retailers and save money</p>
+    </header>
+
+    <main class="search-section">
+      <div class="search-card">
+        <div class="input-group">
+          <label for="category" class="input-label">
+            <i class="fas fa-tags" style="margin-right: 6px;"></i>
+            Product Category
+          </label>
+          <select id="category" class="form-select">
+            <option value="">All Categories</option>
+            <option value="mobile">📱 Mobile Phones</option>
+            <option value="laptop">💻 Laptops</option>
+            <option value="headphones">🎧 Headphones</option>
+            <option value="camera">📷 Cameras</option>
+            <option value="home">🏠 Home Appliances</option>
+            <option value="fashion">👕 Fashion</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="productInput" class="input-label">
+            <i class="fas fa-search" style="margin-right: 6px;"></i>
+            Product Name
+          </label>
+          <div class="search-box">
+            <input type="text" id="productInput" class="form-input" placeholder="e.g. iPhone 15, MacBook Pro...">
+            <button onclick="comparePrices()" class="search-button" aria-label="Compare Prices">
+              <span class="button-text">Compare</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="results" class="results-container">
+      <!-- Results will appear here -->
+    </div>
+
+    <footer class="footer">
+      <p><i class="far fa-copyright"></i> 2023 MatchMyPrice | Save on every purchase</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
